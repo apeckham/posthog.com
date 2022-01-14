@@ -139,6 +139,7 @@ clickhouse:
       operator: "Equal"
       effect: "NoSchedule"
 ```
+- you might need to trigger the reallocation for the clickhouse pod, e.g. run `kubectl delete pod chi-posthog-posthog-0-0-0`
 You can find more information about optional settings like that [here](https://github.com/PostHog/charts-clickhouse/blob/main/charts/posthog/values.yaml) and also more about [`nodeSelectors`](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector) and [`taints` and `tolerations`](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/).
 
 ### [ClickHouse](https://clickhouse.tech/)
